@@ -1,0 +1,109 @@
+/*!
+  comentario en bloque, simple pero efectivo XD, ademas sale en version comprimida
+ */
+.btn-error {
+  background-color: #f00;
+}
+
+.container {
+  background-image: url("img/fondos/default.jpeg");
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  color: #f00;
+}
+a:visited {
+  color: #00f;
+}
+a:active {
+  color: #0f0;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+}
+
+td:nth-child(1) {
+  color: #f00;
+  background-color: #000;
+}
+
+td:nth-child(2) {
+  color: #f00;
+  background-color: #00f;
+}
+
+td:nth-child(3) {
+  color: #f00;
+  background-color: #0f0;
+}
+
+div p:nth-child(1) {
+  color: #f00;
+  background-color: #000;
+}
+
+div p:nth-child(2) {
+  color: #f00;
+  background-color: #00f;
+}
+
+div p:nth-child(3) {
+  color: #f00;
+  background-color: #0f0;
+}
+
+.profile-btn {
+  background: grey;
+}
+
+.profile-label {
+  background: grey;
+}
+
+.profile-input {
+  background: grey;
+}
+
+.perfil-sm {
+  width: 576px;
+}
+
+.perfil-md {
+  width: 768px;
+}
+
+.perfil-lg {
+  width: 992px;
+}
+
+.sidebar {
+  background-color: #333333;
+  width: 20%;
+}
+
+.header {
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+}
+
+a {
+  background-color: yellow;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.main-menu {
+  margin: 0 auto;
+  background-color: #666;
+  color: white;
+  height: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

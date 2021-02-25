@@ -1,0 +1,94 @@
+//colores botones
+$color-error: #ff0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888888;
+
+$border-radius: 0.4rem;
+
+$btn-color: (
+  'error': $color-error,
+  'warning': $color-warning,
+  'accepted': $color-accepted,
+  'normal': $color-normal
+);
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+
+  &:hover {
+    box-shadow: $border-radius/2 $border-radius/2 $color-shadow;
+  }
+
+  &:active {
+    background-color: orange;
+    color: white;
+  }
+}
+
+//creamos la clase que da conor de fondo
+@each $k, $v in $btn-color {
+  .btn-#{$k}{
+    background-color: $v;
+  }
+}
+
+// estructura de la tabla
+
+table{
+  border-collapse: collapse;
+}
+th, td{
+  border: 1px solid black;
+  padding: 1rem;
+}
+$color-col-even: #cccccc;
+$color-col-odd: #888888;
+@function colum-color($col-nubmer) {
+  @if ($col-nubmer % 2 == 0) {
+    @return $color-col-even;
+  }@else{
+    @return $color-col-odd;
+  }
+}
+
+$start: 1;
+$end: 10;
+@for $num from $start through $end {
+  tbody tr td:nth-child(#{$num}){
+    background-color: colum-color($num);
+  }
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.row > * {
+  border: 1px solid black;
+  height: 150px;
+}
+
+// sistema de maquetacion
+$elms_num: 12;
+
+// funcion que devuelve la anchura corespondiente al elemento
+@function anchura_col($i){
+  @return (100 /  $elms_num) * $i;
+}
+
+// bucle para generar las clases
+@for $i from 1 through $elms_num {
+  .row > .col-#{$i} {
+    padding: 1rem;
+    width: #{anchura_col($i)}+'%';
+  }
+}
+
+
